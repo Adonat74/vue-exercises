@@ -1,15 +1,9 @@
 <script setup>
 import { ref } from 'vue'
-import  NewFile from './NewFile.vue'
 
 defineProps({
   msg: String,
-});
-
-
-function sayHi() {
-  alert('hi');
-}
+})
 
 const count = ref(0)
 </script>
@@ -18,9 +12,6 @@ const count = ref(0)
   <h1>{{ msg }}</h1>
 
   <div class="card">
-
-    <NewFile :hi="sayHi"/>
-    
     <button type="button" @click="count++">count is {{ count }}</button>
     <p>
       Edit
