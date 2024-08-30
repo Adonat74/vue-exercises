@@ -1,20 +1,15 @@
 <script setup>
   import { format } from 'timeago.js';
  
-  defineProps({
-      name: String, // nom de la ville
-      weather: String, // descriptif météo 
-      temperature: Number, // température en °C
-      updatedAt: Date // date de dernière mise à jour
-  })
+  defineProps(['city'])
 
 </script>
 
 <template>
-  <h1>{{name}}</h1>
-  <p>Temps : {{ weather }}</p>
-  <p>Température : {{ temperature }} C°</p>
-  <p>mise à jour : {{ format(updatedAt) }}</p>
+  <h2>{{ city.name }}</h2>
+  <p>Temps : {{ city.weather[0].description }}</p>
+  <p>Température : {{ city.main.temp }} C°</p>
+  <p>mise à jour : {{ format(city.dt * 1000) }}</p>
 
 </template>
 

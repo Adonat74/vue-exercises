@@ -6,10 +6,13 @@
 </script>
 
 <template>
-  <RouterLink to="/">page d'accueil -></RouterLink>
-  <br>
-  <RouterLink to="/villes">la météo -></RouterLink>
-
+  <nav>
+    <RouterLink to="/">page d'accueil -></RouterLink>
+    <br>
+    <RouterLink to="/villes">la météo -></RouterLink>
+  </nav>
+  
+ <p>SALUT</p>
 
   <router-view></router-view>
 </template>

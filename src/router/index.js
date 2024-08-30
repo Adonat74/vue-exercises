@@ -1,14 +1,14 @@
-import { createMemoryHistory, createRouter } from 'vue-router'
+import { createWebHistory, createRouter } from 'vue-router'
 import HelloWorld from '../components/HelloWorld.vue'
 import CitiesList from '../views/CitiesList.vue';
 import City from '../components/City.vue';
 
 const router = createRouter({
-    history: createMemoryHistory(),
+    history: createWebHistory(),
     routes:[
-        {path: '/', component: HelloWorld},
-        {path: '/villes', component: CitiesList},
-        {path: '/ville', component: City},
+        {path: '/', name:"home" ,component: HelloWorld},
+        {path: '/villes', name:"villes" , component: CitiesList},
+        //{path: '/ville', name:"ville" , component: City},
     ]
 });
 
