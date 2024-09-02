@@ -5,7 +5,7 @@ import axios from "axios";
 
 let data = ref([]);
 
-async function getUser() {
+async function getCities() {
   try {
     const response = await axios.get('https://api.openweathermap.org/data/2.5/find?lat=45.758&lon=4.765&cnt=20&cluster=yes&lang=fr&units=metric&APPID=683c9161b07304af09f463da98aaa2e6');
     data.value = response.data.list;
@@ -15,7 +15,7 @@ async function getUser() {
 }
 
 onMounted(async () => {
-  await getUser();
+  await getCities();
   console.log(data.value);
 });
 
